@@ -541,9 +541,6 @@ By adding Voice Instructions in the system prompt you can guide the AI to respon
 
 The OpenAI Realtime feature uses WebRTC to connect directly to OpenAI's Realtime API, enabling continuous voice streaming with minimal latency for the most natural conversation experience.
 
-### RealTime Features
-
-https://github.com/user-attachments/assets/d1cc9ca4-e750-4c36-816e-6f27b8caeec1
 
 - **Direct WebRTC Connection**: Connect directly to OpenAI's API for the lowest possible latency.
 - **Zero Turn-Taking**: No need to wait for the AI to finish before speaking - interrupt naturally like a real conversation.
