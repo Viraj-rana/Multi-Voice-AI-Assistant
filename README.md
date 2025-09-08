@@ -1,6 +1,4 @@
-[![Python application](https://github.com/smart-coder997/ai-llm-voice-agentic-chatbot/actions/workflows/python-app.yml/badge.svg)](https://github.com/smart-coder997/ai-llm-voice-agentic-chatbot/actions/workflows/python-app.yml)
-![Docker support](https://img.shields.io/badge/docker-supported-blue)
-[![License](https://img.shields.io/github/license/smart-coder997/ai-llm-voice-agentic-chatbot)](https://github.com/smart-coder997/ai-llm-voice-agentic-chatbot/blob/main/LICENSE)
+[![Python application](https://github.com/Viraj-rana/Multi-Voice-AI-Assistant/)
 
 # Voice Chat AI 🎙️
 
@@ -10,9 +8,6 @@ You can run all locally, you can use openai for chat and voice, you can mix betw
 
 WebRTC Real Time API with OpenAI you can have a real time conversation, interrupt the AI and have instant responses. You can also use OpenAI's new TTS model gpt-4o-mini-tts to make the AI more human like with emotions and expressive voices.
 
-Check out the game and story documentation:
-- [Games Documentation](docs/games.md): Play interactive games with various game master characters.
-- [Stories Documentation](docs/stories.md): Experience immersive story adventures with AI characters.
 
 ## Quick Start
 
@@ -78,8 +73,8 @@ https://github.com/user-attachments/assets/ea8d401c-83b4-4a45-af2a-0b3a50e1a0be
    or use `conda` just make it python 3.10
 
    ```bash
-   conda create --name ai-llm-voice-agentic-chatbot python=3.10
-   conda activate ai-llm-voice-agentic-chatbot
+   conda create --name Multi-AI-Voice-Assistant python=3.10
+   conda activate Multi-AI-Voice-Assistant
    ```
 
 3. Install dependencies:
@@ -133,7 +128,7 @@ Kokoro TTS operates locally on your machine or local network, requiring no API k
 
 ## Usage
 
-Run the application: 🏃
+Run the application: 
 
 Web UI
 
@@ -166,9 +161,9 @@ uncomment the lines needed in the docker-compose.yml depending on your host syst
 
 ```yaml
 services:
-  ai-llm-voice-agentic-chatbot:
-    image: smart-coder997/ai-llm-voice-agentic-chatbot:latest
-    container_name: ai-llm-voice-agentic-chatbot
+  Multi-Voice-AI-Assistant:
+    image: smart-coder997/Multi-Voice-AI-Assistant:latest
+    container_name: Multi-Voice-AI-Assistant
     environment:
       - PULSE_SERVER=/mnt/wslg/PulseServer  # Default: WSL2 PulseAudio server (Windows CMD or WSL2 Ubuntu)
       # - PULSE_SERVER=unix:/tmp/pulse/native  # Uncomment for native Ubuntu/Debian with PulseAudio
@@ -198,13 +193,13 @@ Cuda and cudnn not supported. No gpu is used and slower when using local xtts an
 > Remove the elevenlabs_voices.json volume mount if not using ElevenLabs.
 
 ```bash
-docker pull smart-coder997/ai-llm-voice-agentic-chatbot:latest
+docker pull smart-coder997/Multi-Voice-AI-Assisant:latest
 ```
 
 or
 
 ```bash
-docker build -t ai-llm-voice-agentic-chatbot -f Dockerfile.cpu .
+docker build -t Multi-Voice-AI-Assistant -f Dockerfile.cpu .
 ```
 
 In Windows command prompt
@@ -215,13 +210,13 @@ docker run -d
    -v \\wsl$\Ubuntu\mnt\wslg:/mnt/wslg/
    -v ./elevenlabs_voices.json:/app/elevenlabs_voices.json
    --env-file .env
-   --name ai-llm-voice-agentic-chatbot
+   --name Multi-Voice-AI-Assistant
    -p 8000:8000
-   smart-coder997/ai-llm-voice-agentic-chatbot:latest
+   smart-coder997/Multi-Voice-AI-Assistant:latest
 ```
 
 ```bash
-docker run -d -e "PULSE_SERVER=/mnt/wslg/PulseServer" -v \\wsl$\Ubuntu\mnt\wslg:/mnt/wslg/ -v %cd%\elevenlabs_voices.json:/app/elevenlabs_voices.json --env-file .env --name ai-llm-voice-agentic-chatbot -p 8000:8000 smart-coder997/ai-llm-voice-agentic-chatbot:latest
+docker run -d -e "PULSE_SERVER=/mnt/wslg/PulseServer" -v \\wsl$\Ubuntu\mnt\wslg:/mnt/wslg/ -v %cd%\elevenlabs_voices.json:/app/elevenlabs_voices.json --env-file .env --name Multi-Voice-AI-Assistant -p 8000:8000 smart-coder997/ai-llm-voice-agentic-chatbot:latest
 ```
 
 In WSL2 Ubuntu
@@ -232,13 +227,13 @@ docker run -d \
     -v /mnt/wslg/:/mnt/wslg/ \
     -v ./elevenlabs_voices.json:/app/elevenlabs_voices.json \
     --env-file .env \
-    --name ai-llm-voice-agentic-chatbot \
+    --name Multi-Voice-AI-Assistant \
     -p 8000:8000 \
-    smart-coder997/ai-llm-voice-agentic-chatbot:latest
+    smart-coder997/Multi-Voice-AI-Assistant:latest
 ```
 
 ```bash
-docker run -d -e "PULSE_SERVER=/mnt/wslg/PulseServer" -v /mnt/wslg/:/mnt/wslg/ -v ./elevenlabs_voices.json:/app/elevenlabs_voices.json --env-file .env --name ai-llm-voice-agentic-chatbot -p 8000:8000 smart-coder997/ai-llm-voice-agentic-chatbot:latest
+docker run -d -e "PULSE_SERVER=/mnt/wslg/PulseServer" -v /mnt/wslg/:/mnt/wslg/ -v ./elevenlabs_voices.json:/app/elevenlabs_voices.json --env-file .env --name Multi-Voice-AI-Assistant -p 8000:8000 smart-coder997/Multi-Voice-AI-Assistant:latest
 ```
 
 ### Nvidia Cuda docker image
@@ -260,10 +255,10 @@ make sure .env is in same folder you are running this from
 > Remove the elevenlabs_voices.json volume mount if not using ElevenLabs.
 
 ```bash
-docker run -d --gpus all -e "PULSE_SERVER=/mnt/wslg/PulseServer" -v \\wsl$\Ubuntu\mnt\wslg:/mnt/wslg/ -v %cd%\elevenlabs_voices.json:/app/elevenlabs_voices.json --env-file .env --name ai-llm-voice-agentic-chatbot-cuda -p 8000:8000 smart-coder997/ai-llm-voice-agentic-chatbot:cuda
+docker run -d --gpus all -e "PULSE_SERVER=/mnt/wslg/PulseServer" -v \\wsl$\Ubuntu\mnt\wslg:/mnt/wslg/ -v %cd%\elevenlabs_voices.json:/app/elevenlabs_voices.json --env-file .env --name Multi-Voice-AI-Assistantt-cuda -p 8000:8000 smart-coder997/Multi-Voice-AI-Assistant:cuda
 ```
 
-Use `docker logs -f ai-llm-voice-agentic-chatbot-cuda` to see the logs
+Use `docker logs -f Multi-Voice-AI-Assistant-cuda` to see the logs
 
 ## 🐧 Run on WSL Native - best option
 
@@ -279,13 +274,13 @@ docker run -d --gpus all \
     -v /mnt/wslg/:/mnt/wslg/ \
     -v ./elevenlabs_voices.json:/app/elevenlabs_voices.json \
     --env-file .env \
-    --name ai-llm-voice-agentic-chatbot-cuda \
+    --name Multi-Voice-AI-Assistant-cuda \
     -p 8000:8000 \
     smart-coder997/ai-llm-voice-agentic-chatbot:cuda
 ```
 
 ```bash
-docker run -d --gpus all -e "PULSE_SERVER=/mnt/wslg/PulseServer" -v /mnt/wslg/:/mnt/wslg/ -v ./elevenlabs_voices.json:/app/elevenlabs_voices.json --env-file .env --name ai-llm-voice-agentic-chatbot-cuda -p 8000:8000 smart-coder997/ai-llm-voice-agentic-chatbot:cuda
+docker run -d --gpus all -e "PULSE_SERVER=/mnt/wslg/PulseServer" -v /mnt/wslg/:/mnt/wslg/ -v ./elevenlabs_voices.json:/app/elevenlabs_voices.json --env-file .env --name Multi-Voice-AI-Assistant-cuda -p 8000:8000 smart-coder997/Multi-Voice-AI-Assistant:cuda
 ```
 
 ## 🐧 Run on Ubuntu/Debian
@@ -297,13 +292,13 @@ docker run -d --gpus all \
     -v /run/user/$(id -u)/pulse:/tmp/pulse:ro \
     -v ./elevenlabs_voices.json:/app/elevenlabs_voices.json \
     --env-file .env \
-    --name ai-llm-voice-agentic-chatbot-cuda \
+    --name Multi-Voice-AI-Assistant \
     -p 8000:8000 \
-    smart-coder997/ai-llm-voice-agentic-chatbot:cuda
+    smart-coder997/Multi-Voice-AI-Assistant:cuda
 ```
 
 ```bash
-docker run -d --gpus all -e PULSE_SERVER=unix:/tmp/pulse/native -v ~/.config/pulse/cookie:/root/.config/pulse/cookie:ro -v /run/user/$(id -u)/pulse:/tmp/pulse:ro -v ./elevenlabs_voices.json:/app/elevenlabs_voices.json --env-file .env --name ai-llm-voice-agentic-chatbot-cuda -p 8000:8000 smart-coder997/ai-llm-voice-agentic-chatbot:cuda
+docker run -d --gpus all -e PULSE_SERVER=unix:/tmp/pulse/native -v ~/.config/pulse/cookie:/root/.config/pulse/cookie:ro -v /run/user/$(id -u)/pulse:/tmp/pulse:ro -v ./elevenlabs_voices.json:/app/elevenlabs_voices.json --env-file .env --name Multi-Voice-AI-Assistant-cuda -p 8000:8000 smart-coder997/Multi-Voice-AI-Assistant:cuda
 ```
 
 🔗 Access the Application
@@ -312,29 +307,29 @@ URL: http://localhost:8000
 To remove use:
 
 ```bash
-docker stop ai-llm-voice-agentic-chatbot-cuda
+docker stop Multi-Voice-AI-Assistant-cuda
 ```
 
 ```bash
-docker rm ai-llm-voice-agentic-chatbot-cuda
+docker rm Multi-Voice-AI-Assistant-cuda
 ```
 
 ### Build it yourself using Nvidia Cuda
 
 ```bash
-docker build -t ai-llm-voice-agentic-chatbot:cuda .
+docker build -t Multi-Voice-AI-Assistant:cuda .
 ```
 
 Running in WSL Ubuntu
 
 ```bash
-wsl docker run -d --gpus all -e "PULSE_SERVER=/mnt/wslg/PulseServer" -v /mnt/wslg/:/mnt/wslg/ -v ./elevenlabs_voices.json:/app/elevenlabs_voices.json --env-file .env --name ai-llm-voice-agentic-chatbot-cuda -p 8000:8000 ai-llm-voice-agentic-chatbot:cuda
+wsl docker run -d --gpus all -e "PULSE_SERVER=/mnt/wslg/PulseServer" -v /mnt/wslg/:/mnt/wslg/ -v ./elevenlabs_voices.json:/app/elevenlabs_voices.json --env-file .env --name Multi-Voice-AI-Assistant-cuda -p 8000:8000 Multi-Voice-AI-Assistant:cuda
 ```
 
 On windows docker desktop using wsl - run in windows
 
 ```bash
-docker run -d --gpus all -e "PULSE_SERVER=/mnt/wslg/PulseServer" -v \\wsl$\Ubuntu\mnt\wslg:/mnt/wslg/ -v %cd%\elevenlabs_voices.json:/app/elevenlabs_voices.json --env-file .env --name ai-llm-voice-agentic-chatbot-cuda -p 8000:8000 ai-llm-voice-agentic-chatbot:cuda
+docker run -d --gpus all -e "PULSE_SERVER=/mnt/wslg/PulseServer" -v \\wsl$\Ubuntu\mnt\wslg:/mnt/wslg/ -v %cd%\elevenlabs_voices.json:/app/elevenlabs_voices.json --env-file .env --name Multi-Voice-AI-Assistant-cuda -p 8000:8000 Multi-Voice-AI-Assistant:cuda
 ```
 
 </details>
@@ -685,7 +680,7 @@ where cudnn_ops64_9.dll
 ### Unanticipated host error OSError 9999
 
 ```bash
-File "C:\Users\someguy\miniconda3\envs\ai-llm-voice-agentic-chatbot\lib\site-packages\pyaudio\__init__.py", line 441, in __init__
+File "C:\Users\someguy\miniconda3\envs\Multi-Voice-AI-Assistant\lib\site-packages\pyaudio\__init__.py", line 441, in __init__
     self._stream = pa.open(**arguments)
 OSError: [Errno -9999] Unanticipated host error
 ```
@@ -752,93 +747,4 @@ To fix this issue:
 
 If you continue to have issues after these steps, creating a fresh virtual environment and reinstalling all dependencies is the most reliable solution.
 
-</details>
 
-## Watch the Demos
-
-OpenAI RealTime
-
-https://github.com/user-attachments/assets/d6ed3c62-fe07-418c-9708-673f21fcf5c2
-
----
-
-OpenAI Enhanced
-
-[![Watch the video](https://img.youtube.com/vi/TjHwVwzUUvM/maxresdefault.jpg)](https://youtu.be/TjHwVwzUUvM)
-
-Click on the thumbnail to open the video☝️
-
----
-
-GPU Only mode CLI
-
-100% local - ollama llama3, xtts-v2
-
-[![Watch the video](https://img.youtube.com/vi/WsWbYnITdCo/maxresdefault.jpg)](https://youtu.be/WsWbYnITdCo)
-
-Click on the thumbnail to open the video☝️
-
----
-
-CPU Only mode CLI
-
-Alien conversation using openai gpt4o and openai speech for tts.
-
-[![Watch the video](https://img.youtube.com/vi/d5LbRLhWa5c/maxresdefault.jpg)](https://youtu.be/d5LbRLhWa5c)
-
-Click on the thumbnail to open the video☝️
-
-## Additional Details
-
-### Console output
-
-Detailed output in terminal while running the app.
-
-When using Elevenlabs on first start of server you get details about your usage limits to help you know how much you have been using.
-
-```bash
-(ai-llm-voice-agentic-chatbot) X:\ai-llm-voice-agentic-chatbot>uvicorn app.main:app --host 0.0.0.0 --port 8000
-
-Switched to ElevenLabs TTS voice: VgPqCpkdPQacBNNIsAqI
-ElevenLabs Character Usage: 33796 / 100027
-
-Using device: cuda
-Model provider: openai
-Model: gpt-4o
-Character: Nerd
-Text-to-Speech provider: elevenlabs
-To stop chatting say Quit or Exit. Say, what's on my screen, to have AI view screen. One moment please loading...
-INFO:     Started server process [12752]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-INFO:     127.0.0.1:62671 - "GET / HTTP/1.1" 200 OK
-INFO:     127.0.0.1:62671 - "GET /app/static/css/styles.css HTTP/1.1" 200 OK
-INFO:     127.0.0.1:62672 - "GET /app/static/js/scripts.js HTTP/1.1" 200 OK
-INFO:     127.0.0.1:62672 - "GET /characters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:62671 - "GET /app/static/favicon.ico HTTP/1.1" 200 OK
-INFO:     127.0.0.1:62673 - "GET /elevenlabs_voices HTTP/1.1" 200 OK
-INFO:     ('127.0.0.1', 62674) - "WebSocket /ws" [accepted]
-INFO:     connection open
-```
-
-### Web UI Chat Box
-
-Features:
-
-- If you ask for code examples in webui the code will be displayed in a code block in a different color and formatted correctly.
-- Working on more features that are displayed , copy button for code blocks, images, links, ect..
-
-## License
-
-This project is licensed under the MIT License.
-
-## Star History
-
-<a href="https://star-history.com/#smart-coder997/ai-llm-voice-agentic-chatbot&Date">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=smart-coder997/ai-llm-voice-agentic-chatbot&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=smart-coder997/ai-llm-voice-agentic-chatbot&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=smart-coder997/ai-llm-voice-agentic-chatbot&type=Date" />
- </picture>
-</a>
