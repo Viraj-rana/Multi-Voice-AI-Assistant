@@ -22,7 +22,6 @@ Get up and running fast with Voice Chat AI! 🔊
 - [**Add New Characters**](#adding-new-characters): Add new characters to the project.
 - [**Troubleshooting**](#troubleshooting): Fix common audio or CUDA errors.
 
-![Ai-Speech](https://imagedelivery.net/WfhVb8dSNAAvdXUdMfBuPQ/ed0edfea-265d-4c23-d11d-0b5ba0f02d00/public)
 
 ## Features
 
