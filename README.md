@@ -56,8 +56,8 @@ https://github.com/user-attachments/assets/ea8d401c-83b4-4a45-af2a-0b3a50e1a0be
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/smart-coder997/ai-llm-voice-agentic-chatbot.git
-   cd ai-llm-voice-agentic-chatbot
+   git clone https://github.com/smart-coder997/Multi-Voice-AI-Assistant.git
+   cd Multi-Voice-AI-Assistant
    ```
 
 2. Create a virtual environment: 🐍
