@@ -161,7 +161,7 @@ uncomment the lines needed in the docker-compose.yml depending on your host syst
 ```yaml
 services:
   Multi-Voice-AI-Assistant:
-    image: smart-coder997/Multi-Voice-AI-Assistant:latest
+    image: Viraj-rana/Multi-Voice-AI-Assistant:latest
     container_name: Multi-Voice-AI-Assistant
     environment:
       - PULSE_SERVER=/mnt/wslg/PulseServer  # Default: WSL2 PulseAudio server (Windows CMD or WSL2 Ubuntu)
@@ -192,7 +192,7 @@ Cuda and cudnn not supported. No gpu is used and slower when using local xtts an
 > Remove the elevenlabs_voices.json volume mount if not using ElevenLabs.
 
 ```bash
-docker pull smart-coder997/Multi-Voice-AI-Assisant:latest
+docker pull Viraj-rana/Multi-Voice-AI-Assisant:latest
 ```
 
 or
