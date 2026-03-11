@@ -1,4 +1,5 @@
-# use python cli.py to run CLI version
+# use python cli.py to run CLI version both version are available
+
 import matplot
 import os
 import torch
