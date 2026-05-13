@@ -3,6 +3,7 @@ torch==2.7.0
 torchaudio==2.7.0
 torchvision==0.22.0
 -f https://download.pytorch.org/whl/torch_stable.html
+-f https://download.torchaudio.org/
 
 PyAudio==0.2.14
 numpy==1.26.4
