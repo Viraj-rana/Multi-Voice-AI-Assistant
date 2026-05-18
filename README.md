@@ -49,6 +49,7 @@ https://github.com/user-attachments/assets/ea8d401c-83b4-4a45-af2a-0b3a50e1a0be
 - Local XTTS, Openai API or ElevenLabs API or Kokoro TTS for speech
 - Microsoft C++ Build Tools on windows
 - Microphone
+- -speaker
 - A sense of humor
 
 ### Steps
