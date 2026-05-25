@@ -21,6 +21,7 @@ Get up and running fast with Voice Chat AI! 🔊
 - [**Game & Story Modes**](#game--story-modes): Explore interactive games and immersive storytelling experiences.
 - [**Add New Characters**](#adding-new-characters): Add new characters to the project.
 - [**Troubleshooting**](#troubleshooting): Fix common audio or CUDA errors.
+- -[**Installations**]:fix the installations in the project.
 
 
 ## Features
