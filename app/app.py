@@ -86,7 +86,7 @@ FASTER_WHISPER_LOCAL = os.getenv("FASTER_WHISPER_LOCAL", "true").lower() == "tru
 # Initialize whisper model as None to lazy load
 whisper_model = None
 
-# Default model size (adjust as needed)
+# Default model size (adjust as needed) for app
 model_size = "medium.en"
 
 if FASTER_WHISPER_LOCAL:
